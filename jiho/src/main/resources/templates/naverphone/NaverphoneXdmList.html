@@ -7,7 +7,7 @@
 <table>
 	<tr>
 		<td>seq</td>
-		<td>addcontact_seq</td>
+		<td>addContact_seq</td>
 		<td>group_seq</td>
 		<td>is_primary</td>
 	</tr>
@@ -15,7 +15,7 @@
 		<td th:text="${list.seq}"></td>
 		<td th:text="${list.addcontact_seq}"></td>
 		<td th:text="${list.group_seq}"></td>
-		<td><a th:href="@{/navergroup/navergroupXdmView(seq=${list.is_primary})}" th:text="${list.is_primary}"></a></td>
+		<td><a th:href="@{/naverphone/naverphoneXdmView(seq=${list.is_primary})}" th:text="${list.is_primary}"></a></td>
 	</tr>
 	
 </table>

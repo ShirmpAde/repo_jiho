@@ -1,34 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.jeongjiho.fapp.naverhompage.NaverhompageDao">
+<mapper namespace="com.jeongjiho.fapp.navercompany.NavercompanyDao">
                    
 
-	<resultMap id="resultMapObj" type="com.jeongjiho.fapp.naverhompage.NaverhompageDto"></resultMap>
+	<resultMap id="resultMapObj" type="com.jeongjiho.fapp.navercompany.NavercompanyDto"></resultMap>
 									   
 	
 	<select id="selectList" resultMap="resultMapObj">
-	  	SELECT 
-			seq,
-		    hompage,
-		    addcontact_seq,
-		    is_primary
-		FROM
-			naverhompage
-		WHERE 1=1
-		ORDER BY seq DESC
+  	SELECT 
+		seq,
+		company,
+		department,
+		addContact_seq,
+		is_primary
+	FROM
+		navercompany
+	WHERE 1=1
+	ORDER BY seq DESC
 	</select>
 	
 	<select id="selectOne" resultMap="resultMapObj">
 		SELECT 
 			seq,
-		    hompage,
-		    addcontact_seq,
-		    is_primary
+			company,
+			department,
+			addContact_seq,
+			is_primary
 		FROM
-			naverhompage
+			navercompany
 		WHERE 1=1
 			AND seq = #{seq}
 		ORDER BY seq DESC
 	</select>
+	
 </mapper>

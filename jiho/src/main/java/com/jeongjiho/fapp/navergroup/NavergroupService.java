@@ -14,4 +14,8 @@ public class NavergroupService {
 	public List<NavergroupDto> selectList(){
 		return navergroupDao.selectList();
 	}
+	
+	public NavergroupDto selectOne(NavergroupDto navergroupDto){
+		return navergroupDao.selectOne(navergroupDto);
+	}
 }

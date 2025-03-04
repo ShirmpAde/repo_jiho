@@ -17,4 +17,13 @@ public class NavergroupController {
 		model.addAttribute("list", navergroupService.selectList());
 		return "navergroup/navergroupXdmList";
 	}
+	
+	@RequestMapping(value = "/navergroup/navergroupXdmView")
+	public String codeGroupXdmView(Model model, NavergroupDto navergroupDto) {
+		
+		System.out.println("navergroupDto.getSeq(): " + navergroupDto.getSeq());
+		System.out.println(model);
+		model.addAttribute("item", navergroupService.selectOne(navergroupDto));
+		return "navergroup/navergroupXdmView";
+	}
 }

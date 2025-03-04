@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.jeongjiho.fapp.addcontact.AddcontactDao">
+                   
+
+	<resultMap id="resultMapObj" type="com.jeongjiho.fapp.addcontact.AddcontactDto"></resultMap>
+									   
+	
+	<select id="selectList" resultMap="resultMapObj">
+  	SELECT 
+		seq,
+		flag,
+		lastName,
+		firstName,
+		middleName,
+		naverId,
+		nickName,
+		memo,
+		is_primary
+	FROM
+		addcontact
+	WHERE 1=1
+	ORDER BY seq DESC
+	</select>
+	
+	<select id="selectOne" resultMap="resultMapObj">
+		SELECT 
+			seq,
+			flag,
+			lastName,
+			firstName,
+			middleName,
+			naverId,
+			nickName,
+			memo,
+			is_primary
+		FROM
+			addcontact
+		WHERE 1=1
+			AND seq = #{seq}
+		ORDER BY seq DESC
+	</select>
+	
+</mapper>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+
+<table>
+	<tr>
+		<td>seq</td>
+		<td>company</td>
+		<td>department</td>
+		<td>addContact_seq</td>
+		<td>is_primary</td>
+	</tr>
+	<tr th:each="list : ${list}">
+		<td th:text="${list.seq}"></td>
+		<td th:text="${list.company}"></td>
+		<td th:text="${list.department}"></td>
+		<td th:text="${list.addcontact_seq}"></td>		
+		<td><a th:href="@{/navercompany/navercompanyXdmView(seq=${list.is_primary})}" th:text="${list.is_primary}"></a></td>
+	</tr>
+	
+</table>
+</body>
+</html>
