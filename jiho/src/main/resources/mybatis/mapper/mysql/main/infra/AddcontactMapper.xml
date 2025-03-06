@@ -42,4 +42,28 @@
 		ORDER BY seq DESC
 	</select>
 	
+	<insert id="insert">
+	INSERT INTO addcontact (					
+			flag,
+			lastName,
+			firstName,
+			middleName,
+			naverId,
+			nickName,
+			memo,
+			is_primary
+		) values (			
+			#{flag},
+			#{lastName},
+			#{firstName},
+			#{middleName},
+			#{naverId},
+			#{nickName},
+			#{memo},
+			#{is_primary}		
+		)
+		<selectKey resultType="String" keyProperty="seq" order="AFTER">
+			SELECT last_insert_id()
+		</selectKey>
+	</insert>
 </mapper>

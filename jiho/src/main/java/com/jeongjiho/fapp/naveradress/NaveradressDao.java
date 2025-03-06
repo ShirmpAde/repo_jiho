@@ -8,4 +8,6 @@ import org.springframework.stereotype.Repository;
 public interface NaveradressDao {
 
 	public List<NaveradressDto> selectList();
+	public NaveradressDto selectOne(NaveradressDto naveradressDto);
+	public int insert(NaveradressDto naveradressDto);
 }

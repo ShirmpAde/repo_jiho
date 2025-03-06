@@ -19,10 +19,10 @@ public class NaveremailDto {
 	public void setEmailAccount(String emailAccount) {
 		this.emailAccount = emailAccount;
 	}
-	public String getEmailDomain() {
+	public String getemailDomain() {
 		return emailDomain;
 	}
-	public void setEmailDomain(String emailDomain) {
+	public void setemailDomain(String emailDomain) {
 		this.emailDomain = emailDomain;
 	}
 	public Integer getAddContact_seq() {

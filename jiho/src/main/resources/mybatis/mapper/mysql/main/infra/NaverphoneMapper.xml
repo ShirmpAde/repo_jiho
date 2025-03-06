@@ -34,4 +34,20 @@
 		ORDER BY seq DESC
 	</select>
 	
+	<insert id="insert">
+	INSERT INTO naverphone (		
+			telType,
+			phoneNumber,
+			addContact_seq,
+			is_primary
+		) values (			
+			#{telType},
+			#{phoneNumber},
+			#{addContact_seq},			
+			#{is_primary}		
+		)
+		<selectKey resultType="String" keyProperty="seq" order="AFTER">
+			SELECT last_insert_id()
+		</selectKey>
+	</insert>
 </mapper>

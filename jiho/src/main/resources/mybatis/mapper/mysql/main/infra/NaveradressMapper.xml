@@ -38,4 +38,24 @@
 		ORDER BY seq DESC
 	</select>
 	
+	<insert id="insert">
+	INSERT INTO naveradress (		
+		adressType,
+		zipCode,
+		search,
+		address,
+		addContact_seq,
+		is_primary
+		) values (			
+			#{adressType},
+			#{zipCode},
+			#{search},
+			#{address},
+			#{addContact_seq},
+			#{is_primary}		
+		)
+		<selectKey resultType="String" keyProperty="seq" order="AFTER">
+			SELECT last_insert_id()
+		</selectKey>
+	</insert>
 </mapper>

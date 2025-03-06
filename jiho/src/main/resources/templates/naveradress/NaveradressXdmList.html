@@ -22,6 +22,7 @@
 		<td th:text="${list.address}"></td>
 		<td th:text="${list.addContact_seq}"></td>
 		<td><a th:href="@{/naveradress/naveradressXdmView(seq=${list.is_primary})}" th:text="${list.is_primary}"></a></td>
+<!--  		<td><a th:href="@{/naveradress/naveradressXdmView?seq=[${list.is_primary}]" th:text="${list.is_primary}"></a></td> -->
 	</tr>
 	
 </table>

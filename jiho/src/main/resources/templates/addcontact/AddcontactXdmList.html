@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+
+<table>
+	<tr>
+		<td>seq</td>
+		<td>flag</td>
+		<td>lastName</td>
+		<td>firstName</td>
+		<td>middleName</td>
+		<td>naverId</td>
+		<td>nickName</td>
+		<td>memo</td>
+		<td>is_primary</td>
+	</tr>
+	<tr th:each="list : ${list}">
+		<td th:text="${list.seq}"></td>
+		<td th:text="${list.flag}"></td>
+		<td th:text="${list.lastName}"></td>
+		<td th:text="${list.firstName}"></td>
+		<td th:text="${list.middleName}"></td>
+		<td th:text="${list.naverId}"></td>
+		<td th:text="${list.nickName}"></td>
+		<td th:text="${list.memo}"></td>
+		<td><a th:href="@{/addcontact/addcontactXdmView(seq=${list.is_primary})}" th:text="${list.is_primary}"></a></td>
+<!--  		<td><a th:href="@{/addcontact/addcontactXdmView?seq=[${list.is_primary}]" th:text="${list.is_primary}"></a></td> -->
+	</tr>
+	
+</table>
+</body>
+</html>

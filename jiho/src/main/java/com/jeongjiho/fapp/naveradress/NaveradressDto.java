@@ -9,6 +9,7 @@ public class NaveradressDto {
 	private String address;
 	private Integer addContact_seq;
 	private Integer is_primary;
+//	-----
 	public String getSeq() {
 		return seq;
 	}
@@ -51,6 +52,5 @@ public class NaveradressDto {
 	public void setIs_primary(Integer is_primary) {
 		this.is_primary = is_primary;
 	}
-	
 	
 }

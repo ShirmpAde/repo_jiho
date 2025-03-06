@@ -4,6 +4,8 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
+import com.jeongjiho.fapp.naveremail.NaveremailDto;
+
 @Repository
 public interface NaveremailDao {
 	
@@ -11,6 +13,7 @@ public interface NaveremailDao {
 	// 쿼리 결과를 가져옴
 
 		public List<NaveremailDto> selectList();
-		 
+		public NaveremailDto selectOne(NaveremailDto naveremailDto);
+		public int insert(NaveremailDto naveremailDto);
 	}
 

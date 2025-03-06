@@ -31,4 +31,19 @@
 			AND seq = #{seq}
 		ORDER BY seq DESC
 	</select>
+	
+	<insert id="insert">
+	INSERT INTO naverhompage (					
+		    hompage,
+		    addcontact_seq,
+		    is_primary
+		) values (			
+			#{hompage},
+			#{addcontact_seq},
+			#{is_primary}				
+		)
+		<selectKey resultType="String" keyProperty="seq" order="AFTER">
+			SELECT last_insert_id()
+		</selectKey>
+	</insert>
 </mapper>

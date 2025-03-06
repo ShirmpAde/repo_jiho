@@ -11,24 +11,36 @@ public class NaveremailController {
 	@Autowired
 	NaveremailService naveremailService;
 			
-//	@RequestMapping(value = "/naverhompage/naverhompageXdmList")
-//	public String codeGroupXdmList(Model model) {
-//		
-//		List<NaverhompageDto> naverhompageDtos = new ArrayList<>();
-//		
-//		naverhompageDtos = naverhompageService.selectList();
-//		
-//		System.out.println("naverhompageDtos.size(): " + naverhompageDtos.size());
-//		
-//		model.addAttribute("list", naverhompageDtos);
-//		
-//		return "naverhompage/naverhompageXdmList";
-//	}
-	
 	@RequestMapping(value = "/naveremail/naveremailXdmList")
 	public String codeGroupXdmList(Model model) {
 		model.addAttribute("list", naveremailService.selectList());
 		return "naveremail/naveremailXdmList";
 	}
+	
+	@RequestMapping(value = "/naveremail/naveremailXdmView")
+	public String naveremailXdmList(Model model, NaveremailDto naveremailDto) {
+		System.out.println("naveremailDto.getSeq(): " + naveremailDto.getSeq());
+		model.addAttribute("item", naveremailService.selectOne(naveremailDto));
+		return "naveremail/naveremailXdmView";
+	}
+	
+	@RequestMapping(value = "/naveremail/naveremailXdmForm")
+	public String naveremailXdmForm() {
+		
+		return "naveremail/naveremailXdmForm";
+	}
+	
+	@RequestMapping(value = "/naveremail/naveremailXdmInst")
+	public String naveremailXdmInst(NaveremailDto naveremailDto) {
+		System.out.println("naveremailDto.getSeq(): " + naveremailDto.getSeq());
+		System.out.println("naveremailDto.getemailAccount(): " + naveremailDto.getEmailAccount());
+		
+		naveremailService.insert(naveremailDto);
+		
+		System.out.println("naveremailDto.getSeq(): " + naveremailDto.getSeq());
+		
+		return "redirect:/naveremail//naveremailXdmList";
+	}
 }
+
 

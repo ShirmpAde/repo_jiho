@@ -4,7 +4,7 @@ public class NaversnsDto {
 	
 	private String seq;
 	private String snsType;	
-	private String snsAdress;
+	private String snsadress;
 	private Integer addContact_seq;
     private Integer is_primary;
 //    -----
@@ -20,11 +20,11 @@ public class NaversnsDto {
 	public void setSnsType(String snsType) {
 		this.snsType = snsType;
 	}
-	public String getSnsAdress() {
-		return snsAdress;
+	public String getSnsadress() {
+		return snsadress;
 	}
-	public void setSnsAdress(String snsAdress) {
-		this.snsAdress = snsAdress;
+	public void setSnsadress(String snsadress) {
+		this.snsadress = snsadress;
 	}
 	public Integer getAddContact_seq() {
 		return addContact_seq;

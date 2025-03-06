@@ -4,6 +4,8 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
+import com.jeongjiho.fapp.naveradress.NaveradressDto;
+
 @Repository
 public interface NaverbirthdayDao {
 
@@ -11,5 +13,6 @@ public interface NaverbirthdayDao {
 	// 쿼리 결과를 가져옴
 
 		public List<NaverbirthdayDto> selectList();
-		
+		public NaverbirthdayDto selectOne(NaverbirthdayDto naverbirthdayDto);
+		public int insert(NaverbirthdayDto naverbirthdayDto);
 }

@@ -11,7 +11,7 @@
   	SELECT 
 		seq,
     	snsType,
-    	snsAdress,
+    	snsadress,
     	addContact_seq,
     	is_primary
 	FROM
@@ -24,7 +24,7 @@
 		SELECT 
 			seq,
     		snsType,
-    		snsAdress,
+    		snsadress,
     		addContact_seq,
     		is_primary
 		FROM
@@ -34,4 +34,20 @@
 		ORDER BY seq DESC
 	</select>
 	
+	<insert id="insert">
+	INSERT INTO naversns (		
+			snsType,
+    		snsadress,
+    		addContact_seq,
+    		is_primary
+		) values (			
+			#{snsType},
+			#{snsadress},			
+			#{addContact_seq},
+			#{is_primary}		
+		)
+		<selectKey resultType="String" keyProperty="seq" order="AFTER">
+			SELECT last_insert_id()
+		</selectKey>
+	</insert>
 </mapper>

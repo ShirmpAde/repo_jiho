@@ -23,5 +23,13 @@ public class NaveradressService {
 	public List<NaveradressDto> selectList(){
 		return naveradressDao.selectList();
 	}
+
+	public Object selectOne(NaveradressDto naveradressDto) {
+		return naveradressDao.selectOne(naveradressDto);
+	}
+	
+	public int insert(NaveradressDto naveradressDto) {
+		return naveradressDao.insert(naveradressDto);
+	}
 }
 

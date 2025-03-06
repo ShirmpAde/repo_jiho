@@ -5,6 +5,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.jeongjiho.fapp.naveradress.NaveradressDto;
+
 @Service
 public class NaverbirthdayService {
 	// 로직을 정의 하는 부분
@@ -28,5 +30,13 @@ public class NaverbirthdayService {
 		
 		public List<NaverbirthdayDto> selectList(){
 			return naverbirthdayDao.selectList();
+		}
+		
+		public Object selectOne(NaverbirthdayDto naverbirthdayDto) {
+			return naverbirthdayDao.selectOne(naverbirthdayDto);
+		}
+		
+		public int insert(NaverbirthdayDto naverbirthdayDto) {
+			return naverbirthdayDao.insert(naverbirthdayDto);
 		}
 	}

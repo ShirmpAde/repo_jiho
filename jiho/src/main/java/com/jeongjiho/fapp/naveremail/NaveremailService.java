@@ -5,6 +5,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.jeongjiho.fapp.naveremail.NaveremailDto;
+
 @Service
 public class NaveremailService {
 	// 로직을 정의 하는 부분
@@ -28,5 +30,13 @@ public class NaveremailService {
 		
 		public List<NaveremailDto> selectList(){
 			return naveremailDao.selectList();
+		}
+
+		public Object selectOne(NaveremailDto naveremailDto) {
+			return naveremailDao.selectOne(naveremailDto);
+		}
+		
+		public int insert(NaveremailDto naveremailDto) {
+			return naveremailDao.insert(naveremailDto);
 		}
 	}

@@ -2,6 +2,9 @@ package com.jeongjiho.fapp.addcontact;
 
 public class AddcontactDto {
 
+//	int -> Integer
+//	varchar -> String
+	
 	private String seq;
 	private Integer flag;
 	private String lastName;
