@@ -2,10 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.jeongjiho.fapp.naveradress.NaveradressDao">
-                   
-
-	<resultMap id="resultMapObj" type="com.jeongjiho.fapp.naveradress.NaveradressDto"></resultMap>
-									   
+    <resultMap id="resultMapObj" type="com.jeongjiho.fapp.naveradress.NaveradressDto"></resultMap> 
 	
 	<select id="selectList" resultMap="resultMapObj">
   	SELECT 

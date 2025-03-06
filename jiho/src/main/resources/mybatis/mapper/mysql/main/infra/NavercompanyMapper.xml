@@ -2,9 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.jeongjiho.fapp.navercompany.NavercompanyDao">
-                   
-
-	<resultMap id="resultMapObj" type="com.jeongjiho.fapp.navercompany.NavercompanyDto"></resultMap>
+    <resultMap id="resultMapObj" type="com.jeongjiho.fapp.navercompany.NavercompanyDto"></resultMap>
 									   
 	
 	<select id="selectList" resultMap="resultMapObj">
@@ -44,10 +42,10 @@
 			#{company},
 			#{department},
 			#{addContact_seq},
-			#{is_primary}				
+			#{is_primary}		
 		)
 		<selectKey resultType="String" keyProperty="seq" order="AFTER">
 			SELECT last_insert_id()
 		</selectKey>
-	</insert>
+	</insert>               	
 </mapper>

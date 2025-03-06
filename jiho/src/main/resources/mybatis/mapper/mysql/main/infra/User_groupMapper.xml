@@ -2,11 +2,9 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.jeongjiho.fapp.user_group.User_groupDao">
-                   
 
-	<resultMap id="resultMapObj" type="com.jeongjiho.fapp.user_group.User_groupDto"></resultMap>
-									   
-	
+ 	<resultMap id="resultMapObj" type="com.jeongjiho.fapp.user_group.User_groupDto"></resultMap>
+
 	<select id="selectList" resultMap="resultMapObj">
   	SELECT 
 		seq,
@@ -36,12 +34,12 @@
 		)
 		<selectKey resultType="String" keyProperty="seq" order="AFTER">
 			SELECT last_insert_id()
-		</selectKey>
+		</selectKey>		
 	</insert>
 	
 	<update id="update">
 		UPDATE user_group SET
 			name ="qqqqqqqq"
 		WHERE seq = #{seq}
-	</update>
+	</update> 	
 </mapper>

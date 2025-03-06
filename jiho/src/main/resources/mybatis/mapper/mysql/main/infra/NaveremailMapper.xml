@@ -2,9 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.jeongjiho.fapp.naveremail.NaveremailDao">
-                   
-
-	<resultMap id="resultMapObj" type="com.jeongjiho.fapp.naveremail.NaveremailDto"></resultMap>
+ 	<resultMap id="resultMapObj" type="com.jeongjiho.fapp.naveremail.NaveremailDto"></resultMap>
 									   
 	
 	<select id="selectList" resultMap="resultMapObj">
@@ -39,8 +37,8 @@
 			addContact_seq
 		) values (			
 			#{emailAccount},
-			#{emailDomain},			
-			#{addContact_seq}				
+			#{emailDomain},
+			#{addContact_seq},
 		)
 		<selectKey resultType="String" keyProperty="seq" order="AFTER">
 			SELECT last_insert_id()

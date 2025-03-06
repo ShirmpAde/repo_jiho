@@ -2,29 +2,27 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.jeongjiho.fapp.naverhompage.NaverhompageDao">
-                   
-
 	<resultMap id="resultMapObj" type="com.jeongjiho.fapp.naverhompage.NaverhompageDto"></resultMap>
 									   
 	
 	<select id="selectList" resultMap="resultMapObj">
-	  	SELECT 
-			seq,
-		    hompage,
-		    addcontact_seq,
-		    is_primary
-		FROM
-			naverhompage
-		WHERE 1=1
-		ORDER BY seq DESC
+  	SELECT 
+		seq,
+		hompage,	
+		addContact_seq,
+		is_primary
+	FROM
+		naverhompage
+	WHERE 1=1
+	ORDER BY seq DESC
 	</select>
 	
 	<select id="selectOne" resultMap="resultMapObj">
 		SELECT 
 			seq,
-		    hompage,
-		    addcontact_seq,
-		    is_primary
+			hompage,	
+			addContact_seq,
+			is_primary
 		FROM
 			naverhompage
 		WHERE 1=1
@@ -33,14 +31,14 @@
 	</select>
 	
 	<insert id="insert">
-	INSERT INTO naverhompage (					
-		    hompage,
-		    addcontact_seq,
-		    is_primary
+	INSERT INTO naverhompage (		
+			hompage,	
+			addContact_seq,
+			is_primary
 		) values (			
 			#{hompage},
-			#{addcontact_seq},
-			#{is_primary}				
+			#{addContact_seq},
+			#{is_primary}		
 		)
 		<selectKey resultType="String" keyProperty="seq" order="AFTER">
 			SELECT last_insert_id()

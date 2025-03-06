@@ -2,16 +2,15 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.jeongjiho.fapp.naverbirthday.NaverbirthdayDao">
-                   
-
-	<resultMap id="resultMapObj" type="com.jeongjiho.fapp.naverbirthday.NaverbirthdayDto"></resultMap>
+    <resultMap id="resultMapObj" type="com.jeongjiho.fapp.naverbirthday.NaverbirthdayDto"></resultMap>
 									   
+	
 	<select id="selectList" resultMap="resultMapObj">
   	SELECT 
 		seq,
 		dateType,
 		date,
-		solarlunar,
+		solarlunar,	
 		addContact_seq,
 		is_primary
 	FROM
@@ -25,7 +24,7 @@
 			seq,
 			dateType,
 			date,
-			solarlunar,
+			solarlunar,	
 			addContact_seq,
 			is_primary
 		FROM
@@ -36,21 +35,21 @@
 	</select>
 	
 	<insert id="insert">
-	INSERT INTO naverbirthday (				
-		dateType,
-		date,
-		solarlunar,
-		addContact_seq,
-		is_primary
+	INSERT INTO naverbirthday (					
+			dateType,
+			date,
+			solarlunar,	
+			addContact_seq,
+			is_primary
 		) values (			
 			#{dateType},
 			#{date},
 			#{solarlunar},
-			#{addContact_seq},
-			#{is_primary}					
+			#{addContact_seq},			
+			#{is_primary}		
 		)
 		<selectKey resultType="String" keyProperty="seq" order="AFTER">
 			SELECT last_insert_id()
 		</selectKey>
-	</insert>
+	</insert>               
 </mapper>

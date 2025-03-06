@@ -2,10 +2,9 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.jeongjiho.fapp.navergroup.NavergroupDao">
-                   
 
-	<resultMap id="resultMapObj" type="com.jeongjiho.fapp.navergroup.NavergroupDto"></resultMap>
-									   
+ 	<resultMap id="resultMapObj" type="com.jeongjiho.fapp.navergroup.NavergroupDto"></resultMap>
+	
 	
 	<select id="selectList" resultMap="resultMapObj">
   	SELECT 
@@ -14,7 +13,7 @@
 		group_seq,
 		is_primary
 	FROM
-		navergroup
+		naveradress
 	WHERE 1=1
 	ORDER BY seq DESC
 	</select>
@@ -26,20 +25,20 @@
 			group_seq,
 			is_primary
 		FROM
-			navergroup
+			naveradress
 		WHERE 1=1
 			AND seq = #{seq}
 		ORDER BY seq DESC
 	</select>
 	
 	<insert id="insert">
-	INSERT INTO navergroup (		
+	INSERT INTO naveradress (		
 			addcontact_seq,
 			group_seq,
 			is_primary
 		) values (			
-			#{addcontact_seq},
-			#{group_seq},			
+			#{addContact_seq},
+			#{group_seq},
 			#{is_primary}		
 		)
 		<selectKey resultType="String" keyProperty="seq" order="AFTER">

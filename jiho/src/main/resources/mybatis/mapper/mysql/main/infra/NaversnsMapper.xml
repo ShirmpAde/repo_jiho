@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.jeongjiho.fapp.navergroup.NavergroupDao">
-                   
-
-	<resultMap id="resultMapObj" type="com.jeongjiho.fapp.navergroup.NavergroupDto"></resultMap>
+<mapper namespace="com.jeongjiho.fapp.naversns.NaversnsDao">
+ 	<resultMap id="resultMapObj" type="com.jeongjiho.fapp.naversns.NaversnsDto"></resultMap>
 									   
 	
 	<select id="selectList" resultMap="resultMapObj">
   	SELECT 
 		seq,
-    	snsType,
-    	snsadress,
-    	addContact_seq,
-    	is_primary
+		snsType,
+		snsadress,
+		addContact_seq,
+		is_primary
 	FROM
 		naversns
 	WHERE 1=1
@@ -23,10 +21,10 @@
 	<select id="selectOne" resultMap="resultMapObj">
 		SELECT 
 			seq,
-    		snsType,
-    		snsadress,
-    		addContact_seq,
-    		is_primary
+			snsType,
+			snsadress,
+			addContact_seq,
+			is_primary
 		FROM
 			naversns
 		WHERE 1=1
@@ -37,12 +35,12 @@
 	<insert id="insert">
 	INSERT INTO naversns (		
 			snsType,
-    		snsadress,
-    		addContact_seq,
-    		is_primary
+			snsadress,
+			addContact_seq,
+			is_primary
 		) values (			
 			#{snsType},
-			#{snsadress},			
+			#{snsadress},
 			#{addContact_seq},
 			#{is_primary}		
 		)
