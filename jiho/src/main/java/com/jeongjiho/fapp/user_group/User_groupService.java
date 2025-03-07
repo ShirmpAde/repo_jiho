@@ -35,5 +35,13 @@ public class User_groupService {
 	public int update(User_groupDto user_groupDto) {
 		return user_groupDao.update(user_groupDto);
 	}
+	
+	public int delete(User_groupDto user_groupDto) {
+		return user_groupDao.delete(user_groupDto);
+	}
+	
+	public int uelete(User_groupDto user_groupDto) {
+		return user_groupDao.uelete(user_groupDto);
+	}
 }
 

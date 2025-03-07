@@ -40,7 +40,7 @@ public class User_groupController {
 		
 		System.out.println("user_groupDto.getSeq(): " + user_groupDto.getSeq());
 		
-		return "redirect:/user_group//user_groupXdmList";
+		return "redirect:/user_group/user_groupXdmList";
 	}
 	
 	@RequestMapping(value = "/user_group/user_groupXdmMfom")
@@ -48,7 +48,7 @@ public class User_groupController {
 		
 		model.addAttribute("item", user_groupService.selectOne(user_groupDto));
 		
-		return "/user_group//user_groupXdmMfom";
+		return "/user_group/user_groupXdmMfom";
 	}
 	
 	@RequestMapping(value = "/user_group/user_groupXdmUpdt")
@@ -56,6 +56,22 @@ public class User_groupController {
 		
 		user_groupService.update(user_groupDto);
 		
-		return "redirect:/user_group//user_groupXdmList";
+		return "redirect:/user_group/user_groupXdmList";
+	}
+	
+	@RequestMapping(value = "/user_group/user_groupXdmDele")
+	public String user_groupXdmDele(User_groupDto user_groupDto) {
+		
+		user_groupService.delete(user_groupDto);
+		
+		return "redirect:/user_group/user_groupXdmList";
+	}
+	
+	@RequestMapping(value = "/user_group/user_groupXdmUele")
+	public String user_groupXdmUele(User_groupDto user_groupDto) {
+		
+		user_groupService.uelete(user_groupDto);
+		
+		return "redirect:/user_group/user_groupXdmList";
 	}
 }

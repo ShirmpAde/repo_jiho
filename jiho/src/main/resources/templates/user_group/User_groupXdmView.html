@@ -17,8 +17,22 @@
 </table>
 
 <a href="/user_group/user_groupXdmList">목록</a>
-<br><a href="">삭제</a>
-<a href="@{/user_group/user_groupXdmfom(seq=${item.seq})}">수정</a>
+<a th:href="@{/user_group/user_groupXdmDele(seq=${item.seq})}" id="delete">삭제</a>
+<a th:href="@{/user_group/user_groupXdmMfom(seq=${item.seq})}">수정</a>
+<a th:href="@{/user_group/user_groupXdmUele(seq=${item.seq})}" id="uelete">업제</a>
+
+<script type="text/javascript">
+
+	document.getElementById("uelete").onclick = function() {
+		if(confirm("진짜요?")){
+			// 삭제 고고
+		} else {
+			// 아무것도 하지 않아도 됩니다.
+			return false;
+		}
+	}
+	
+</script>
 
 </body>
 </html>

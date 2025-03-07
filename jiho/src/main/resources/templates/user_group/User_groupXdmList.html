@@ -11,9 +11,10 @@
 	</tr>
 	<tr th:each="list : ${list}">
 		<td th:text="${list.seq}"></td>		
-		<td><a th:href="@{/user_group/user_groupXdmView(seq=${list.name})}" th:text="${list.name}"></a></td>
+		<td><a th:href="@{/user_group/user_groupXdmView(seq=${list.seq})}" th:text="${list.name}"></a></td>
 	</tr>
 	
 </table>
+	<a href="/user_group/user_groupXdmMfom">등록</a>
 </body>
 </html>

@@ -4,7 +4,7 @@
 </head>
 <body>
 
-<form action="/user_group/user_groupXdmUpdt" method="post" id="form">
+<form action="/user_group/user_groupXdmInst" method="post" id="form">
 	<input type="hidden" name="seq" th:value="${item?.seq}"/>
 	seq: <input type="text" name="seq" id="seq" maxlength="10" disabled th:value="${item?.seq}"/>
 	<!-- ?붙이면 없으면 없는대로 가겠다란뜻 -->
@@ -13,7 +13,7 @@
 </form>
 
 <script type="text/javascript">
-
+	
 	document.getElementById("btnSave").onclick = function() {
 		document.getElementById("form").submit();
 	}
@@ -22,9 +22,9 @@
 		alert("asdfasdf");
 	} */
 	
-	document.getElementById("name").onchange = function() {
-		alert("name");
-	}
+// 	document.getElementById("name").onchange = function() {
+// 		alert("name");
+// 	}
 	
 </script>	
 </table>

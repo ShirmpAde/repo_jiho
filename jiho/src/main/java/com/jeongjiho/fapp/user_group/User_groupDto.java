@@ -4,7 +4,14 @@ public class User_groupDto {
 
 	private String seq;
 	private String name;
-//	-----
+	private Integer delNy;
+public Integer getDelNy() {
+		return delNy;
+	}
+	public void setDelNy(Integer delNy) {
+		this.delNy = delNy;
+	}
+	//	-----
 	public String getSeq() {
 		return seq;
 	}
@@ -16,6 +23,5 @@ public class User_groupDto {
 	}
 	public void setName(String name) {
 		this.name = name;
-	}
-	
+	}	
 }

@@ -10,6 +10,7 @@ import com.jeongjiho.fapp.naveradress.NaveradressDto;
 @Service
 public class NavercompanyService {
 		
+//	@Autowired : 주입한다
 		@Autowired
 		NavercompanyDao navercompanyDao;
 

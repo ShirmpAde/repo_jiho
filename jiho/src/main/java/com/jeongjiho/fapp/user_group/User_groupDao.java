@@ -11,4 +11,6 @@ public interface User_groupDao {
 	public User_groupDto selectOne(User_groupDto user_groupDto);
 	public int insert(User_groupDto user_groupDto);
 	public int update(User_groupDto user_groupDto);
+	public int delete(User_groupDto user_groupDto);
+	public int uelete(User_groupDto user_groupDto);
 }

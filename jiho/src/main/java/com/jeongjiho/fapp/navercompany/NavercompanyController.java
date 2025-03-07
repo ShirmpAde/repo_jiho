@@ -33,6 +33,7 @@ public class NavercompanyController {
 	}
 	
 	@RequestMapping(value = "/navercompany/navercompanyXdmInst")
+//	String을 반환한다. navercompanyXdmInst는 매서드(함수명)
 	public String navercompanyXdmInst(NavercompanyDto navercompanyDto) {
 		System.out.println("navercompanyDto.getSeq(): " + navercompanyDto.getSeq());
 		System.out.println("navercompanyDto.getCompany(): " + navercompanyDto.getCompany());
@@ -41,7 +42,7 @@ public class NavercompanyController {
 		
 		System.out.println("navercompanyDto.getSeq(): " + navercompanyDto.getSeq());
 		
-		return "redirect:/navercompany//navercompanyXdmList";
+		return "redirect:/navercompany/navercompanyXdmList";
 	}
 }
 
